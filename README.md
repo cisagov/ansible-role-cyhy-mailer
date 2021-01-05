@@ -1,6 +1,6 @@
 # ansible-role-cyhy-mailer #
 
-[![Build Status](https://travis-ci.com/cisagov/ansible-role-cyhy-mailer.svg?branch=develop)](https://travis-ci.com/cisagov/ansible-role-cyhy-mailer)
+[![GitHub Build Status](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-cyhy-mailer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-cyhy-mailer/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-cyhy-mailer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-cyhy-mailer/context:python)
 
@@ -33,7 +33,7 @@ Here's how to use it in a playbook:
 
 ## Contributing ##
 
-We welcome contributions!  Please see [here](CONTRIBUTING.md) for
+We welcome contributions!  Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for
 details.
 
 ## License ##
