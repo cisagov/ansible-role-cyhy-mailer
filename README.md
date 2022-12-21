@@ -1,8 +1,7 @@
 # ansible-role-cyhy-mailer #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-cyhy-mailer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-cyhy-mailer/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-cyhy-mailer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-cyhy-mailer/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing
 [cisagov/cyhy-mailer](https://github.com/cisagov/cyhy-mailer).
@@ -34,8 +33,10 @@ Here's how to use it in a playbook:
 - hosts: docker
   become: yes
   become_method: sudo
-  roles:
-    - cyhy_mailer
+  tasks:
+    - name: Install CyHy Mailer
+      ansible.builtin.include_role:
+        name: cyhy_mailer
 ```
 
 ## Contributing ##
