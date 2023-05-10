@@ -1,5 +1,4 @@
 ---
-# tasks file for cyhy_mailer
 - name: Create the /var/cyhy/cyhy-mailer directory
   file:
     path: /var/cyhy/cyhy-mailer
