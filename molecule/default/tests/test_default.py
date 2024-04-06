@@ -12,14 +12,13 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-@pytest.mark.parametrize(
-    "directory", [{"path": "/var/cyhy/cyhy-mailer", "mode": "0o755"}]
-)
-def test_packages(host, directory):
+@pytest.mark.parametrize("path,mode", [("/var/cyhy/cyhy-mailer", "0o755")])
+def test_directories(host, path, mode):
     """Test that the appropriate directories were created."""
-    assert host.file(directory["path"]).exists
-    assert host.file(directory["path"]).is_directory
-    assert oct(host.file(directory["path"]).mode) == directory["mode"]
+    directory = host.file(path)
+    assert directory.exists
+    assert directory.is_directory
+    assert oct(directory.mode) == mode
 
 
 @pytest.mark.parametrize(
