@@ -14,5 +14,5 @@
       - "--strip-components=1"
     group: "{{ cyhy_mailer_file_owner_group | default(omit) }}"
     owner: "{{ cyhy_mailer_file_owner_username | default(omit) }}"
-    remote_src: yes
+    remote_src: true
     src: https://api.github.com/repos/cisagov/cyhy-mailer/tarball/develop
