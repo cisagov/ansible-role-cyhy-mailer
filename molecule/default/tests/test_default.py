@@ -12,18 +12,27 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-@pytest.mark.parametrize(
-    "directory", [{"path": "/var/cyhy/cyhy-mailer", "mode": "0o755"}]
-)
-def test_packages(host, directory):
+@pytest.mark.parametrize("path,mode", [("/var/cyhy/cyhy-mailer", "0o755")])
+def test_directories(host, path, mode):
     """Test that the appropriate directories were created."""
-    assert host.file(directory["path"]).exists
-    assert host.file(directory["path"]).is_directory
-    assert oct(host.file(directory["path"]).mode) == directory["mode"]
+    directory = host.file(path)
+    assert directory.exists
+    assert directory.is_directory
+    assert oct(directory.mode) == mode
 
 
-@pytest.mark.parametrize("f", ["/var/cyhy/cyhy-mailer/docker-compose.yml"])
-def test_command(host, f):
-    """Test that appropriate files exist."""
-    assert host.file(f).exists
-    assert host.file(f).is_file
+@pytest.mark.parametrize(
+    "path,mode",
+    [
+        ("/var/cyhy/cyhy-mailer/docker-compose.bod.yml", "0o644"),
+        ("/var/cyhy/cyhy-mailer/docker-compose.cyhy-notification.yml", "0o644"),
+        ("/var/cyhy/cyhy-mailer/docker-compose.cyhy.yml", "0o644"),
+        ("/var/cyhy/cyhy-mailer/docker-compose.yml", "0o644"),
+    ],
+)
+def test_files(host, path, mode):
+    """Test that the appropriate files were created."""
+    file = host.file(path)
+    assert file.exists
+    assert file.is_file
+    assert oct(file.mode) == mode
