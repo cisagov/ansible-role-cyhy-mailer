@@ -3,8 +3,9 @@
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions)
 [![CodeQL](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions/workflows/codeql-analysis.yml)
 
-An Ansible role for installing
-[cisagov/cyhy-mailer](https://github.com/cisagov/cyhy-mailer).
+An Ansible role for installing [Docker Compose](https://docs.docker.com/compose/)
+files to run [cisagov/cyhy-mailer](https://github.com/cisagov/cyhy-mailer) in the
+[CyHy environment](https://github.com/cisagov/cyhy_amis).
 
 ## Requirements ##
 
