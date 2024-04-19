@@ -7,6 +7,11 @@
     path: /var/cyhy/cyhy-mailer
     state: directory
 
+- name: Install tar
+  ansible.builtin.package:
+    name:
+      - tar
+
 - name: Download and untar the cyhy-mailer tarball
   ansible.builtin.unarchive:
     dest: /var/cyhy/cyhy-mailer
