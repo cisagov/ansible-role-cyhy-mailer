@@ -2,7 +2,7 @@
 - name: Create the /var/cyhy/cyhy-mailer directory
   ansible.builtin.file:
     group: "{{ cyhy_mailer_file_owner_group | default(omit) }}"
-    mode: 0755
+    mode: u=rwx,g=rx,o=rx
     owner: "{{ cyhy_mailer_file_owner_username | default(omit) }}"
     path: /var/cyhy/cyhy-mailer
     state: directory
