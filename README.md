@@ -1,6 +1,7 @@
 # ansible-role-cyhy-mailer #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-cyhy-mailer)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-cyhy-mailer/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-cyhy-mailer/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing
